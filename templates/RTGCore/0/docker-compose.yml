@@ -8,7 +8,6 @@ RTGCore:
   image: dnadave/rtg-core:dec2015
   volumes:
   - /Projects/BIGdata:/data:rw
-  - /home/dnadave/q/Shared/StatGen:/statgen:rw
   stdin_open: true
   net: bridge
   privileged: true
