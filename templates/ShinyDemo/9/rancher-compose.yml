@@ -1,0 +1,9 @@
+.catalog:
+  name: "Shiny Server with GWAS and RNAseq demo"
+  version: "v0.10-jan2017"
+  description: "Shiny server with nginx authentication hosting GWAS and RNAseq demos"
+  uuid: shinydemo-0
+  questions:
+    - variable: HOST_PORT
+      label: port
+      description: Port on host for web connection
