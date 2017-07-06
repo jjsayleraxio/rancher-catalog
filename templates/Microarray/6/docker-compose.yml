@@ -4,8 +4,6 @@ microarray:
   - /Projects/BIGdata:/data:rw
   ports:
   - :8787/tcp
-  labels:
-    io.rancher.container.pull_image: always
   hostname: axiohost13
   stdin_open: true
   net: bridge
