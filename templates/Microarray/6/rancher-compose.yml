@@ -3,3 +3,5 @@
   version: "v0.7-may2017"
   description: "RStudio session with Microarray tagged packages installed"
   uuid: microarray-6
+
+ microarray:
