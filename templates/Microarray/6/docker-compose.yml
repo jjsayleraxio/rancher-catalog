@@ -1,7 +1,9 @@
 microarray:
   image: dnadave/release_microarray:may2017
   ports:
-  - 63230:8787/tcp
+  - :8787/tcp
+  environment:
+  - PORT=8787
   labels:
     io.rancher.container.pull_image: always
   tty: true
