@@ -1,5 +1,7 @@
 microarray:
   image: dnadave/release_microarray:may2017
+  ports:
+  - :8787/tcp
   labels:
     io.rancher.container.pull_image: always
   tty: true
