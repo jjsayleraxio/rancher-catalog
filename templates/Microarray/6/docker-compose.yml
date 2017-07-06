@@ -8,6 +8,4 @@ microarray:
   hostname: axiohost13
   volumes:
   - /Projects/BIGdata:/data:rw
-  stdin_open: true
-  net: bridge
   privileged: true
