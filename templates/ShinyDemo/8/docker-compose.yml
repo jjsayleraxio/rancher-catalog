@@ -1,11 +1,10 @@
 shinygwas:
   image: dnadave/release_shinydemo:dec2016
   ports:
-  - "${HOST_PORT}:80/tcp"
+  - 80
   labels:
     io.rancher.container.pull_image: always
   tty: true
-  hostname: axiohost13
   stdin_open: true
   net: bridge
   privileged: true
