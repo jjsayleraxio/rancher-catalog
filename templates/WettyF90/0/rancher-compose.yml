@@ -1,8 +1,8 @@
 .catalog:
   name: "WETTY terminal with BLUPF90"
   version: "v0.1-jul2017"
-  description: "Web based WETTY terminal"
-  uuid: wetty-0
+  description: "Web based WETTY terminal with BLUPF90 installed"
+  uuid: wettyf90-0
 
 #wetty:
 #  health_check:
