@@ -1,7 +1,7 @@
 version: '2'
 services:
-  proteomics:
-    image: dnadave/release_proteomics:jan2018
+  sequencing:
+    image: dnadave/release_sequencing:feb2018
     ports:
       - 8787
     labels:
@@ -15,7 +15,7 @@ services:
     net: bridge
     privileged: true
     labels:
-      #make proteomics a global service
+      #make sequencing a global service
       io.rancher.scheduler.global: 'true'
-      # make proteomics only run on host with specified value:
+      # make sequencing only run on host with specified value:
       io.rancher.scheduler.affinity:host_label: ServerID=${host}

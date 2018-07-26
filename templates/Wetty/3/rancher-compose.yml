@@ -1,8 +1,8 @@
 version: '2'
 .catalog:
-  name: "RStudio with Microarray Packages"
-  version: "v0.9-jan2018"
-  description: "RStudio session with Microarray tagged packages installed"
+  name: "WETTY terminal"
+  version: "v0.4-jul2017"
+  description: "Web based WETTY terminal"
   questions:
     - variable: host
       label: "Host"
@@ -13,7 +13,4 @@ version: '2'
       options:
         - "axiohost13"
         - "axiohost17"
-  uuid: microarray-0
-
-#microarray:
-  
+  uuid: wetty-0

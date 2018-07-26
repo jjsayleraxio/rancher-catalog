@@ -1,8 +1,8 @@
 version: '2'
 .catalog:
-  name: "RStudio with Microarray Packages"
-  version: "v0.9-jan2018"
-  description: "RStudio session with Microarray tagged packages installed"
+  name: "RStudio with Sequencing Packages"
+  version: "v0.9-feb2018"
+  description: "RStudio session with Sequencing tagged packages installed"
   questions:
     - variable: host
       label: "Host"
@@ -13,7 +13,4 @@ version: '2'
       options:
         - "axiohost13"
         - "axiohost17"
-  uuid: microarray-0
-
-#microarray:
-  
+  uuid: sequencing-0
