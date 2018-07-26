@@ -1,0 +1,13 @@
+proteomics:
+  image: dnadave/release_proteomics:jan2018
+  ports:
+  - 8787
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  hostname: axiohost13
+  volumes:
+  - /Projects/BIGdata:/data:rw
+  stdin_open: true
+  net: bridge
+  privileged: true
