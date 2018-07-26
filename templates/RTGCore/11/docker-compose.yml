@@ -10,7 +10,7 @@ services:
     volumes:
       - /Projects/BIGdata:/data:rw
       - /Projects/data:/ssd:rw
-    net: bridge
+#    net: bridge
     privileged: true
     labels:
       #make microarray a global service
