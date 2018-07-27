@@ -12,7 +12,7 @@ services:
       - /Projects/BIGdata:/data:rw
       - /Projects/data:/ssd:rw
     stdin_open: true
-    net: bridge
+#    net: bridge
     privileged: true
     labels:
       #make proteomics a global service
