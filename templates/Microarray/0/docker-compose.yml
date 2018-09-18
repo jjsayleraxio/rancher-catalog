@@ -9,5 +9,5 @@ microarray:
   volumes:
   - /Projects/BIGdata:/data:rw
   stdin_open: true
-  net: bridge
+  #net: bridge
   privileged: true
