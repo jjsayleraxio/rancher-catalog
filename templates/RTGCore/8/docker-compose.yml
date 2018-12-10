@@ -3,7 +3,7 @@ RTGCore:
   - 3000
   labels:
     io.rancher.container.pull_image: always
-  hostname: axiohost13
+  hostname: ${host}
   image: dnadave/rtg-core:mar2017
   volumes:
   - /Projects/BIGdata:/data:rw
