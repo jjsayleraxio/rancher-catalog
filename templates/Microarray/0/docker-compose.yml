@@ -1,13 +1,21 @@
-microarray:
-  image: dnadave/release_microarray:oct2015
-  ports:
-  - 8787
-  labels:
-    io.rancher.container.pull_image: always
-  tty: true
-  hostname: axiohost13
-  volumes:
-  - /Projects/BIGdata:/data:rw
-  stdin_open: true
-  #net: bridge
-  privileged: true
+version: '2'
+services:
+  microarray:
+          image: jjsaxio/bioc_proteomics:jan2018
+    ports:
+      - 8787
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    stdin_open: true
+#    net: bridge
+    privileged: true
+    labels:
+      #make microarray a global service
+      io.rancher.scheduler.global: 'true'
+      # make microarray only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}
