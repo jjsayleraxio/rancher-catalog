@@ -1,11 +1,22 @@
-RTGCore:
-  ports:
-  - 3000
-  labels:
-    io.rancher.container.pull_image: always
-  hostname: ${host}
-  image: jjsaxio/rtg-core:mar2017
-  volumes:
-  - /Projects/BIGdata:/data:rw
-  net: bridge
-  privileged: true
+version: '2'
+services:
+  sequencing:
+    image: jjsaxio/rtg-core:mar2017-validated
+    ports:
+      - 3000
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    stdin_open: true
+#    net: bridge
+    privileged: true
+    labels:
+      #make sequencing a global service
+      io.rancher.scheduler.global: 'true'
+      # make sequencing only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}
+
