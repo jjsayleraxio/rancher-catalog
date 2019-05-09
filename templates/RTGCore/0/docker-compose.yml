@@ -1,6 +1,6 @@
 version: '2'
 services:
-  sequencing:
+  RTGCore:
     image: jjsaxio/rtg-core:mar2017-validated
     ports:
       - 3000
