@@ -6,7 +6,7 @@ version: '2'
   questions:
     - variable: host
       label: "Host"
-      description: "Chose a host to run container:"
+      description: "Choose a host to run container:"
       default: "axiohost17"
       require: true
       type: enum
