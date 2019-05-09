@@ -2,4 +2,14 @@
   name: "Shiny Server with GWAS and RNAseq demo"
   version: "v0.10-jan2017"
   description: "Shiny server with nginx authentication hosting GWAS and RNAseq demos"
+  questions:
+    - variable: host
+      label: "Host"
+      description: "Choose a host to run container:"
+      default: "axiohost17"
+      require: true
+      type: enum
+      options:
+        - "axiohost13"
+        - "axiohost17"
   uuid: shinydemo-0
