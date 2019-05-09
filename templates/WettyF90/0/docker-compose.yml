@@ -1,13 +1,21 @@
-wetty:
-  image: dnadave/wettyf90:jul2017
-  ports:
-  - 3000
-  labels:
-    io.rancher.container.pull_image: always
-  tty: true
-  hostname: axiohost13
-  volumes:
-  - /Projects/BIGdata:/data:rw
-  stdin_open: true
-  net: bridge
-  privileged: true
+version: '2'
+services:
+  wetty:
+    image: jjsaxio/axio_wettyf90:jul2017
+    ports:
+      - 3000
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    stdin_open: true
+    #net: bridge
+    privileged: true
+    labels:
+      #make wettyf90 a global service
+      io.rancher.scheduler.global: 'true'
+      # make wettyf90 only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}

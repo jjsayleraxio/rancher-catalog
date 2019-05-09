@@ -1,14 +1,16 @@
+version: '2'
 .catalog:
   name: "RTGCore and snpEff"
-  version: "v0.1-dec2015-validated"
+  version: "v0.9-mar2017-validated"
   description: "RealTime Genomics Core Tools with snpEff."
-  uuid: rtgcore-0
-
-#RTGCore:
-#  health_check:
-#    port: 3000
-#    interval: 2000
-#    unhealthy_threshold: 3
-#    request_line: GET / HTTP/1.0
-#    healthy_threshold: 2
-#    response_timeout: 2000
+  questions:
+    - variable: host
+      label: "Host"
+      description: "Chose a host to run container:"
+      default: "axiohost17"
+      require: true
+      type: enum
+      options:
+        - "axiohost13"
+        - "axiohost17"
+  uuid: RTGCore-0
