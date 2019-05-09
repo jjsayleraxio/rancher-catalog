@@ -8,3 +8,8 @@ shinygwas:
   stdin_open: true
   net: bridge
   privileged: true
+  labels:
+    #make sequencing a global service
+    io.rancher.scheduler.global: 'true'
+    # make sequencing only run on host with specified value:
+    io.rancher.scheduler.affinity:host_label: ServerID=${host}
