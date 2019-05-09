@@ -1,0 +1,16 @@
+version: '2'
+.catalog:
+  name: "WETTY terminal"
+  version: "v0.4-jul2017"
+  description: "Web based WETTY terminal"
+  questions:
+    - variable: host
+      label: "Host"
+      description: "Chose a host to run container:"
+      default: "axiohost17"
+      require: true
+      type: enum
+      options:
+        - "axiohost13"
+        - "axiohost17"
+  uuid: wetty-0
