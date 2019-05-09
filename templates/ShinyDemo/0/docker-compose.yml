@@ -6,7 +6,7 @@ shinygwas:
     io.rancher.container.pull_image: always
   tty: true
   stdin_open: true
-  net: bridge
+  #  net: bridge
   privileged: true
   labels:
     #make sequencing a global service
