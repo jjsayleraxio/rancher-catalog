@@ -1,13 +1,21 @@
-sequencing:
-  image: dnadave/release_sequencing:oct2015
-  ports:
-  - 8787
-  labels:
-    io.rancher.container.pull_image: always
-  tty: true
-  hostname: axiohost13
-  volumes:
-  - /Projects/BIGdata:/data:rw
-  stdin_open: true
-  net: bridge
-  privileged: true
+version: '2'
+services:
+  sequencing:
+    image: jjsaxio/bioc_sequencing:feb2018
+    ports:
+      - 8787
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    stdin_open: true
+#    net: bridge
+    privileged: true
+    labels:
+      #make sequencing a global service
+      io.rancher.scheduler.global: 'true'
+      # make sequencing only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}
