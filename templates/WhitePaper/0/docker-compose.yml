@@ -1,0 +1,24 @@
+version: '2'
+services:
+  WhitePaper:
+    image: jjsaxio/bioc_sequencing:feb2018
+    ports:
+      - 8787
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    ulimits:
+      stack:
+        soft: 16384
+        hard: 16384
+    stdin_open: true
+    privileged: true
+    labels:
+      #make sequencing a global service
+      io.rancher.scheduler.global: 'true'
+      # make sequencing only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}
