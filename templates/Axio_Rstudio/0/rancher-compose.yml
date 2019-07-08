@@ -1,0 +1,16 @@
+version: '2'
+.catalog:
+  name: "RStudio with Sequencing Packages"
+  version: ""test
+  description: "RStudio session with Sequencing tagged packages installed"
+  questions:
+    - variable: host
+      label: "Host"
+      description: "Choose a host to run container:"
+      default: "axiohost17"
+      require: true
+      type: enum
+      options:
+        - "axiohost13"
+        - "axiohost17"
+  uuid: axio-rstudio-0
