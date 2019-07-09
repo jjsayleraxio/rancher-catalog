@@ -1,5 +1,5 @@
 name: Axio RStudio
 description: |
-  RStudio session with Sequencing tagged packages installed
+  RStudio session with custom Axio Research packages installed
 version: latest
 category: "Axio services"
