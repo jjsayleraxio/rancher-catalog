@@ -1,6 +1,6 @@
 version: '2'
 services:
-  sequencing:
+  rstudio:
     image: jjsaxio/axio_rstudio:latest
     ports:
       - 8787
