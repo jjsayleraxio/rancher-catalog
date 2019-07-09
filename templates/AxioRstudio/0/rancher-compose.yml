@@ -1,8 +1,8 @@
 version: '2'
 .catalog:
-  name: "RStudio with Sequencing Packages"
-  version: ""test
-  description: "RStudio session with Sequencing tagged packages installed"
+  name: "Axio Research Rstudio"
+  version: "test"
+  description: "RStudio session with custom Axio Research packages installed"
   questions:
     - variable: host
       label: "Host"
