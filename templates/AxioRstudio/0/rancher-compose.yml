@@ -1,7 +1,7 @@
 version: '2'
 .catalog:
   name: "Axio Research Rstudio"
-  version: "latest"
+  version: "Rv3.5.0"
   description: "RStudio session with custom Axio Research packages installed"
   questions:
     - variable: host
