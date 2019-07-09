@@ -1,5 +1,0 @@
-name: WhitePaper
-description: |
-  RStudio session with Sequencing tagged packages installed, plus special ulimits setup for running Random Forest simulations.
-version: v0.9-feb2018
-category: "Axio services"
