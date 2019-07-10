@@ -1,7 +1,7 @@
 version: '2'
 .catalog:
   name: "RStudio with Sequencing Packages"
-  version: ""test
+  version: "Rv3.6.0"
   description: "RStudio session with Sequencing tagged packages installed"
   questions:
     - variable: host
