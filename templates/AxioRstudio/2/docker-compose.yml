@@ -1,7 +1,7 @@
 version: '2'
 services:
   sequencing:
-    image: jjsaxio/axio_rstudio:Rv3.5.0
+    image: jjsaxio/axio_rstudio:v1.0-rstudio3.5-bioc3.7
     ports:
       - 8787
     labels:
