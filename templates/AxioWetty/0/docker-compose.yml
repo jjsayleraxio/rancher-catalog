@@ -1,14 +1,14 @@
 version: '2'
 services:
-  sequencing:
-  	image: jjsaxio/axio_wetty:latest
-  	init: true
+  wetty:
+    image: jjsaxio/axio_wetty:latest
     ports:
       - 3000
     labels:
       io.rancher.container.pull_image: always
     tty: true
     hostname: ${host}
+    init: true
     volumes:
       - /Projects/BIGdata:/data:rw
       - /Projects/data:/ssd:rw
