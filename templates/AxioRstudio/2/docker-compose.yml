@@ -1,0 +1,21 @@
+version: '2'
+services:
+  sequencing:
+    image: jjsaxio/axio_rstudio:v1.0-rstudio3.5-bioc3.7
+    ports:
+      - 8787
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    stdin_open: true
+#    net: bridge
+    privileged: true
+    labels:
+      #make sequencing a global service
+      io.rancher.scheduler.global: 'true'
+      # make sequencing only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}
