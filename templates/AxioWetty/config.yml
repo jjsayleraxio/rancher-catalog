@@ -1,0 +1,5 @@
+name: Axio RStudio
+description: |
+  RStudio session with Sequencing tagged packages installed
+version: Rv3.6.0
+category: "Axio services"
