@@ -1,5 +1,5 @@
-name: Axio RStudio
+name: AxioWeTTY
 description: |
-  RStudio session with Sequencing tagged packages installed
-version: Rv3.6.0
+        Web terminal
+version: Latest
 category: "Axio services"
