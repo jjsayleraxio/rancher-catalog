@@ -1,7 +1,7 @@
 version: '2'
 services:
   wetty:
-    image: jjsaxio/axio_wetty:latest
+    image: jjsaxio/axio_wetty:v1.0
     ports:
       - 3000
     labels:
