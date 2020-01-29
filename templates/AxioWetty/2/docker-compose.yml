@@ -1,0 +1,22 @@
+version: '2'
+services:
+  wetty:
+    image: jjsaxio/axio_wetty:dev
+    ports:
+      - 3000
+      - 8050
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    hostname: ${host}
+    init: true
+    volumes:
+      - /Projects/BIGdata:/data:rw
+      - /Projects/data:/ssd:rw
+    stdin_open: true
+    privileged: true
+    labels:
+      #make a global service
+      io.rancher.scheduler.global: 'true'
+      # make only run on host with specified value:
+      io.rancher.scheduler.affinity:host_label: ServerID=${host}

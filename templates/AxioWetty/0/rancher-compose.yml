@@ -1,0 +1,16 @@
+version: '2'
+.catalog:
+  name: "Web command line terminal"
+  version: "v1.0"
+  description: "Command line interface accessable via a web browser."
+  questions:
+    - variable: host
+      label: "Host"
+      description: "Choose a host to run container:"
+      default: "axiohost17"
+      require: true
+      type: enum
+      options:
+        - "axiohost13"
+        - "axiohost17"
+  uuid: axio-wetty
